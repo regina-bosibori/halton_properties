@@ -1,0 +1,10 @@
+.rooms{
+    text-align: left;
+}
+.size{
+    text-align: right;
+    
+}
+.item p{
+    display:inline-block;
+}
