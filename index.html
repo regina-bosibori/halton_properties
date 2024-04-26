@@ -6,11 +6,16 @@
     <title>Halton Properties</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Include Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <div id="header">
-        <div id="header1" class="flex bg-black pt-2 h-10 text-white py-1">
-            <h2 class="text-sm flex-1 text-red-900">QUALITY IS OUR STANDARD<span>FOR OVER 40 YEARS</span></h2>
+        <div id="header1" class="flex bg-black pt-2 h-10 text-white py-1 px-14">
+            <h2 class="text-sm flex-1 text-[#A39584]">QUALITY IS OUR STANDARD<span>FOR OVER 40 YEARS</span></h2>
             <div class="flex space-x-2">
                 <div class="flex text-sm space-x-2">
                     <svg class="h-5 pt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-1 h-1">
@@ -23,7 +28,7 @@
                     <svg class="h-5 pt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                       </svg>
-                      <span>555.555.5555</span>
+                      <span class="pr-6">555.555.5555</span>
                 </div>
             </div>
         </div>
@@ -43,7 +48,41 @@
     </div>
 
     <div class="section1">
-        <img class="h-100 object-cover w-full filter"src="https://static.wixstatic.com/media/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg/v1/fill/w_1296,h_780,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://static.wixstatic.com/media/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg/v1/fill/w_1296,h_780,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg"></div>
+                <div class="swiper-slide"><img src="https://static.wixstatic.com/media/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg/v1/fill/w_1296,h_780,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_71436a6f6c634d46614c49~mv2_d_3000_2477_s_4_2.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+  <!-- Add Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    loop: true,
+    duration:3000,
+    autoplay-delay="4000",
+    speed="4000",
+    [config]="swiperConfig",
+    watchSlidesProgress=true,
+  });
+</script>
+
+    
+        
         <div class="absolute inset-0 opacity-20"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center">
             <h2 class="mt-20 pt-20 text-white tracking-widest text-8xl font-bold">LUXURY LIVING</h2>
@@ -82,13 +121,13 @@
             <div class="col-start-1 bg-zinc-900 ml-12 mt-8 px-8 w-100">
                 <div class="flex mt-6 justify-between">
                     <h1 class=" mt-4 tracking-widest">FLOOR PLANS</h1>
-                    <div class="flex ml-1 space-x-1  text-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-14">
+                    <div class="flex ml-1 space-x-1  ">
+                        <button id="back"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-14">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                          </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-14">
+                          </svg></button>
+                        <button id="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-14">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>  
+                        </svg></button>
                     </div>
                 </div>
                 <span>$225,000</span>
@@ -123,7 +162,7 @@
                 
             </div>
 
-            <img class="col-span-2 min-h-52 w-5/6 object-cover object-fit bg-white pb-20 pt-20 py-20 mt-8 mb-8 mr-20" src="https://static.wixstatic.com/media/eb9dc8_dd781b65de5d40baa152ade03272a9b2~mv2.jpg/v1/fill/w_600,h_556,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/shutterstock_1028925250_edited.jpg">
+            <img id="image" class="col-span-2 min-h-52 w-5/6 object-cover object-fit bg-white pb-20 pt-20 py-20 mt-8 mb-8 mr-20" src="https://static.wixstatic.com/media/eb9dc8_dd781b65de5d40baa152ade03272a9b2~mv2.jpg/v1/fill/w_600,h_556,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/shutterstock_1028925250_edited.jpg">
         </div>
     </div>
 
@@ -320,5 +359,7 @@
 
         </div>
     </div>
+
+
 </body>
 </html>
